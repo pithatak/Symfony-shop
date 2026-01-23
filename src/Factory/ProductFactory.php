@@ -9,7 +9,7 @@ use App\Service\ProductImageUploader;
 
 class ProductFactory
 {
-    public function __construct(public ProductImageUploader $PIUploader)
+    public function __construct(private  ProductImageUploader $PIUploader)
     {}
     public function create(string $name, float $price, Category $category, User $user, string $imagePath): Product
     {
